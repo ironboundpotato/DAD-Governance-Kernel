@@ -1,145 +1,220 @@
-# D.A.D. — Deterministic Autonomous Directives
+D.A.D. — Deterministic Autonomous Directives
+A Pre-Execution Governance Kernel for Modular AI Systems
 
-A pre-execution governance kernel for modular AI systems.
+Author: Kevin Gilbert
+Role: Governance Architect
 
+Overview
 
-## Overview
-
-D.A.D. is a deterministic supervisory kernel.
-
-It evaluates autonomous system actions before execution.
+D.A.D. is a deterministic supervisory kernel that evaluates autonomous system actions before execution.
 
 It is not a reasoning engine.
 
-It is a governance layer that enforces policy.
+It is a governance layer responsible for:
 
-It detects instability.
+• Enforcing policy
+• Detecting instability
+• Ensuring traceable, explainable decisions
 
-It ensures traceable, explainable decisions.
+D.A.D. evaluates every action through a strict pipeline:
 
+Delegation Validation
 
-## Evaluation Pipeline
+Constraint Evaluation
 
-- Delegation Validation  
-- Constraint Evaluation  
-- Drift Classification  
-- Deterministic State Routing  
-- Structured Logging  
+Drift Classification
 
-No stochastic routing.  
-No silent fallbacks.  
-Every transition is explicit.
+Deterministic State Routing
 
+Structured Logging
 
-## Purpose
+Key principles:
+
+• No stochastic routing
+• No silent fallbacks
+• Every transition is explicit
+
+Features
+
+D.A.D. provides:
+
+• Deterministic pre-execution safety
+• Formal authority boundaries
+• Drift detection and severity classification
+• Predictable, reproducible state transitions
+• Fully traceable decision paths
+• Modular subsystem design
+• Audit-ready structured logs
+• Zero hidden routing or fallback behavior
+
+Purpose
 
 Modern AI systems frequently lack:
 
-- Clear authority boundaries  
-- Deterministic safety checks  
-- Structural stability diagnostics  
-- Pre-execution governance  
+• Clear authority and role boundaries
+• Deterministic safety checks
+• Structural stability diagnostics
+• Pre-execution governance layers
 
-D.A.D. fills this gap by evaluating:
+D.A.D. fills this gap by:
 
-- Intent  
-- Policy compliance  
-- System stability  
+• Evaluating intent
+• Verifying policy compliance
+• Diagnosing drift
+• Ensuring system stability before execution
 
 This enables:
 
-- High reliability  
-- Traceable decision paths  
-- Predictable outcomes  
-- Operational auditability  
-- Modular extensibility  
+• High reliability
+• Predictable outcomes
+• Operational auditability
+• Modular extensibility
 
-
-## Core Architecture
-
-
-### Delegation Registry
+Core Architecture
+Delegation Registry
 
 Determines who can authorize what.
 
-Registers authorities.
+This subsystem:
 
-Grants specific delegations.
+• Registers authorities
+• Grants specific delegations
+• Validates incoming requests
+• Rejects unauthorized actions deterministically
 
-Validates incoming requests.
-
-
-### Constraint System
+Constraint System
 
 Constraints are deterministic pass/fail rules.
 
-A constraint either allows an action or blocks it.
+A constraint returns:
 
-There are no side effects.
+True → allowed
+False → blocked
 
-There is no hidden routing logic.
+There are:
 
+• No side effects
+• No fallback routing
+• No implicit overrides
 
-### Drift Engine
+Constraints ensure policy compliance before any system action proceeds.
 
-Classifies system stability issues:
+Drift Engine
 
-- L1 Cosmetic  
-- L2 Ambiguity  
-- L3 Structural Instability  
-- L4 Critical Fault  
+The Drift Engine classifies system instability using a four-level scale:
 
-The Drift Engine **classifies only**.
+L1 — Cosmetic Drift
+L2 — Ambiguity Drift
+L3 — Structural Instability
+L4 — Critical Fault
 
-It does not decide outcomes.
+The Drift Engine diagnoses only.
 
+It does not decide outcomes — that responsibility belongs to the Deterministic State Machine.
 
-### Deterministic State Machine
+Deterministic State Machine
 
-Combines:
+The state machine combines inputs from:
 
-- Delegation results  
-- Constraint outcomes  
-- Drift severity  
+• Delegation Registry
+• Constraint System
+• Drift Engine
 
-Produces one reproducible decision.
+It produces one reproducible decision for each action.
 
-Illegal transitions generate explicit errors.
+Illegal or undefined transitions generate explicit errors rather than silent behavior.
 
+Structured Logging
 
-### Structured Logging
+Every evaluation produces a structured log containing:
 
-Every evaluation emits:
+• Input action
+• Delegation results
+• Constraint decisions
+• Drift classification
+• Final routed state
+• Decision result
 
-- Input action  
-- Delegation outcome  
-- Constraint results  
-- Drift classification  
-- Final routed state  
-- Decision result  
+Logs support:
 
+• Audits
+• Debugging
+• Regulatory compliance
+• Post-incident analysis
 
-## Repository Structure
+Example (Pseudo-Code)
+from dad import Kernel, Request
 
-This repository contains:
+dad = Kernel()
 
-- README  
-- Architecture document  
-- Whitepaper  
-- Example run file  
-- Source directory with modules  
+action = Request("modify_memory")
 
+result = dad.evaluate(action)
 
-## Status
+print(result.decision)
+print(result.trace)
 
-Version v1.0 Prototype  
+Expected output:
 
+BLOCKED
+Reason: Constraint failed — modification not authorized.
+Drift Level: L1 (Cosmetic)
+Repository Structure
+/README.md
+/LICENSE
 
-## License
+/docs/
+    whitepaper.md
+    architecture.md
 
-MIT License  
+/src/
+    delegation/
+    constraints/
+    drift/
+    state_machine/
+    logger/
 
+examples/
 
-## Author
+docs/ → Whitepaper and architecture notes
+src/ → Reference implementation (planned for v1.1)
+examples/ → Sample evaluations and test patterns
 
-Kevin Gilbert — Governance Architect
+Roadmap
+v1.0 — Documentation Release
+
+• Full architecture summary
+• Conceptual specification
+
+v1.1 — Reference Implementation
+
+• Python prototype
+• CLI evaluation tool
+• Drift simulator
+
+v1.2 — Test Suite
+
+• Deterministic behavior tests
+• Constraint and delegation validation suite
+
+v2.0 — Multi-Agent Integration
+
+• Orchestration layer
+• Cross-system governance
+
+Contributing
+
+Pull requests are welcome.
+
+For major changes, please open an issue first to discuss what you would like to modify.
+
+License
+
+This project is licensed under the MIT License.
+
+See the LICENSE file for details.
+
+Author
+
+Kevin Gilbert
+Governance Architect
