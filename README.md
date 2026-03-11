@@ -18,7 +18,7 @@ Clear authority boundaries
 Deterministic safety checks
 Structural stability diagnostics
 Pre-execution governance
-D.A.D. fills that gap by acting as an independent oversight layer that evaluates intent, policy compliance, and system stability before allowing any downstream execution.
+D.A.D. fills this gap by evaluating intent, policy compliance, and system stability before allowing downstream execution.
 This enables:
 High reliability
 Traceable decision paths
@@ -31,13 +31,13 @@ Determines who can authorize what.
 Register authorities
 Grant specific delegations
 Validate incoming requests
-All delegations must be explicit.
+Delegation must always be explicit.
 2. Constraint System
 Operational rules expressed as simple pass/fail classes.
 Each constraint returns:
 Python
 Copy code
-True   # allowed  
+True   # allowed
 False  # block
 No side effects.
 No hidden routing logic.
@@ -49,7 +49,7 @@ L3 — Structural Instability
 L4 — Critical Fault
 The drift engine classifies — it does not decide.
 4. Deterministic State Machine
-A finite-state controller that converts:
+Converts:
 Delegation results
 Constraint outcomes
 Drift severity
@@ -65,8 +65,8 @@ Final state
 Decision outcome
 Supports audits, debugging, and reproducibility.
 Repository Structure
+Plain text
 Copy code
-
 DAD-Governance-Kernel/
 │
 ├── README.md
@@ -84,7 +84,6 @@ DAD-Governance-Kernel/
     └── main.py
 Status
 Version: v1.0 Prototype
-Focus: Determinism, observability, modularity, and pre-execution governance.
 License
 MIT License
 Author
