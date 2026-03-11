@@ -65,8 +65,8 @@ Final state
 Decision outcome
 Supports audits, debugging, and reproducibility.
 Repository Structure
-Plain text
 Copy code
+
 DAD-Governance-Kernel/
 │
 ├── README.md
@@ -84,7 +84,6 @@ DAD-Governance-Kernel/
     └── main.py
 Status
 Version: v1.0 Prototype
-Focus: determinism, observability, modularity, and pre-execution governance.
 License
 MIT License
 Author
