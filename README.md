@@ -25,15 +25,15 @@ D.A.D. fills this gap by evaluating intent.
 It checks policy compliance.
 It verifies system stability before allowing execution.
 This enables high reliability.
-It enables traceable decision paths.
-It enables predictable outcomes.
-It enables operational auditability.
-It enables modular extensibility.
+This enables traceable decision paths.
+This enables predictable outcomes.
+This enables operational auditability.
+This enables modular extensibility.
 Core Architecture
 Delegation Registry
 Determines who can authorize what.
 Registers authorities.
-Grants delegations.
+Grants specific delegations.
 Validates incoming requests.
 Constraint System
 Constraints are deterministic pass or fail rules.
@@ -62,9 +62,6 @@ Constraint results
 Drift classification
 Final routed state
 Decision result
-Designed for audits.
-Designed for debugging.
-Designed for reproducibility.
 Repository Structure
 This repository contains the README.
 It contains the ARCHITECTURE document.
