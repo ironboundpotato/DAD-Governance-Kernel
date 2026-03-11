@@ -56,24 +56,15 @@ Every evaluation emits a structured record including:
 • Decision result
 Designed for audits, debugging, and reproducibility.
 Repository Structure
-(This is descriptive only; no code blocks included.)
 DAD-Governance-Kernel
 README.md
 ARCHITECTURE.md
 WHITEPAPER_v1.md
 example_run.md
-src directory containing:
-delegation.py
-constraints.py
-drift_engine.py
-governance_kernel.py
-state_machine.py
-logger.py
-main.py
+src directory with modules for delegation, constraints, drift engine, governance kernel, state machine, logger, and main entry point
 Status
 Version: v1.0 Prototype
 License
 MIT License
 Author
 Kevin Gilbert — Governance Architect
-END OF README
