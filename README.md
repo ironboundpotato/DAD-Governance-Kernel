@@ -31,7 +31,7 @@ Determines who can authorize what.
 Register authorities
 Grant specific delegations
 Validate incoming requests
-No dynamic permissions — all delegation must be explicit.
+All delegations must be explicit.
 2. Constraint System
 Operational rules expressed as simple pass/fail classes.
 Each constraint returns:
@@ -47,20 +47,23 @@ L1 — Cosmetic
 L2 — Ambiguity
 L3 — Structural Instability
 L4 — Critical Fault
-The drift engine classifies, but does not decide outcomes.
+The drift engine classifies — it does not decide.
 4. Deterministic State Machine
-A finite-state controller that converts delegation + constraints + drift into a single, reproducible decision.
+A finite-state controller that converts:
+Delegation results
+Constraint outcomes
+Drift severity
+into one reproducible decision.
 Illegal transitions produce explicit errors.
-Every input leads to exactly one output.
 5. Structured Logging
-All evaluations generate a JSON decision record containing:
+Each evaluation generates a JSON record containing:
 Input action
 Delegation result
 Constraint results
 Drift severity
 Final state
 Decision outcome
-This supports auditing, debugging, reproducibility, and system observability.
+Supports audits, debugging, and reproducibility.
 Repository Structure
 Copy code
 
