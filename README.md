@@ -46,4 +46,50 @@ Each constraint returns:<br>
 
 ```python
 True   # allowed
-False  # block
+False  # block5. **Structured Logging**  
+   Every evaluation step is recorded using structured JSON logs.  
+   This enables reproducibility, auditability, and system-wide observability.<br><br>
+
+No stochastic routing.<br>
+No silent fallbacks.<br>
+Every transition is explicit.<br><br>
+
+---
+
+## Purpose
+
+Modern AI systems frequently lack:<br>
+- Clear authority boundaries<br>
+- Deterministic safety checks<br>
+- Structural stability diagnostics<br>
+- Pre-execution governance layers<br><br>
+
+D.A.D. fills this gap by evaluating **intent**, **policy compliance**, and **system stability** before any downstream execution is allowed.<br><br>
+
+This enables:<br>
+- High reliability<br>
+- Traceable decision paths<br>
+- Predictable outcomes<br>
+- Operational auditability<br>
+- Modular extensibility<br><br>
+
+---
+
+## Core Architecture
+
+### **1. Delegation Registry**
+
+Determines who can authorize what.<br>
+- Register authorities<br>
+- Grant specific delegations<br>
+- Validate incoming requests<br><br>
+
+### **2. Constraint System**
+
+Constraints are simple pass/fail rules represented as deterministic functions.<br><br>
+
+Example:<br>
+
+```python
+return True   # allowed
+return False  # blocked
