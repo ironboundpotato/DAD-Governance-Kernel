@@ -1,5 +1,33 @@
 # D.A.D. Architecture Overview
 
+## Evaluation Pipeline
+
+Action Request
+
+↓
+
+Delegation Validation
+
+↓
+
+Constraint Evaluation
+
+↓
+
+Drift Classification
+
+↓
+
+Deterministic State Routing
+
+↓
+
+Structured Logging
+
+↓
+
+Return to IDLE
+
 ## Purpose
 
 This document provides a structured breakdown of the core subsystems that make up the Deterministic Autonomous Directives kernel.
