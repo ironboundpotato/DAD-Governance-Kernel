@@ -1,3 +1,58 @@
+# D.A.D. Governance Kernel
+
+**Deterministic Autonomous Directives**
+
+A pre-execution governance kernel for modular autonomous AI systems.
+
+D.A.D. evaluates system actions before execution through a deterministic control pipeline:
+
+Delegation → Constraints → Drift → Routing → Logging
+
+---
+
+## Core Idea
+
+Modern AI systems can reason and plan, but they often lack a deterministic control layer that governs **what actions are allowed to execute**.
+
+D.A.D. introduces a governance kernel that:
+
+• validates execution authority  
+• enforces constraint policies  
+• classifies operational drift  
+• routes system state deterministically  
+• produces structured audit logs
+
+The kernel is **not a reasoning engine**.
+
+It is a **supervisory control layer** designed to stabilize autonomous agent behavior.
+
+---
+
+## Architecture
+
+Full architecture documentation:
+
+docs/ARCHITECTURE.md
+
+---
+
+## Whitepaper
+
+docs/DAD_Whitepaper_v1.0.md
+
+---
+
+## Example Execution
+
+examples/example_run.md
+
+---
+
+## Author
+
+Kevin Gilbert  
+2026
+
 D.A.D. — Deterministic Autonomous Directives
 A Pre-Execution Governance Kernel for Modular AI Systems
 
