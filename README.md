@@ -273,3 +273,26 @@ Author
 
 Kevin Gilbert
 Governance Architect
+
+## Project Status
+
+Current version: v0.1 (Architectural Prototype)
+
+Implemented:
+
+• Deterministic governance pipeline  
+• Delegation registry  
+• Constraint evaluation system  
+• Drift classification engine  
+• Deterministic state machine routing  
+• Structured logging system  
+• Execution harness and examples
+
+Not yet implemented:
+
+• distributed multi-agent orchestration  
+• real plugin execution layer  
+• concurrency handling  
+• performance benchmarking
+
+This repository represents a **governance architecture prototype**, not a production deployment.
