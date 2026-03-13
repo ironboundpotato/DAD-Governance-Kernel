@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dad-governance-kernel"
+version = "0.1.0"
+description = "Deterministic Autonomous Directives — A governance kernel for modular AI systems"
+authors = [
+  { name="Kevin Gilbert" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/ironboundpotato/DAD-Governance-Kernel"
+Repository = "https://github.com/ironboundpotato/DAD-Governance-Kernel"
